@@ -1,12 +1,9 @@
 <script lang="ts">
-	import Sidebar from '$lib/Sidebar.svelte';
+	import Sidebar from '$components/Sidebar.svelte';
 	import { page } from '$app/stores';
-
-	let showSidebar = true;
 	import * as m from '$paraglide/messages';
 	import { languageTag } from '$paraglide/runtime';
-
-	console.log(languageTag());
+	let showSidebar = true;
 </script>
 
 <div class="navbar min-h-[5rem] border-opacity-50 bg-base-100">
@@ -63,8 +60,9 @@
 		</button>
 	</div>
 </div>
-<Sidebar current={$page.route.id}><slot /></Sidebar>
-<button class="btn btn-primary fixed bottom-10 right-10 shadow-xl">
+<Sidebar {showSidebar} />
+
+<asd class="btn btn-primary fixed bottom-10 right-10 shadow-xl">
 	<svg
 		width="24"
 		height="24"
@@ -76,4 +74,4 @@
 		<path d="M4 12H20M12 4V20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 	</svg>
 	Add new
-</button>
+</asd>
