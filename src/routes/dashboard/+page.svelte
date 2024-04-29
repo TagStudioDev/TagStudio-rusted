@@ -1,13 +1,54 @@
-<script>
+<script lang="ts">
 	let selected = '0';
+
+	let fakeData = [
+		{
+			name: 'Curriculum_Vitae_2012.pdf',
+			size: '3.2 MB',
+			lastModified: '02/9/2012'
+		},
+		{
+			name: 'party-invite.docx',
+			size: '989 KB',
+			lastModified: '02/9/2013'
+		},
+		{
+			name: 'solar-system.pptx',
+			size: '10.3 MB',
+			lastModified: '24/12/2023'
+		},
+		{
+			name: 'budget-estimate-Q1.xlsx',
+			size: '2 MB',
+			lastModified: '07/1/2024'
+		},
+		{
+			name: 'poster.docx',
+			size: '765 KB',
+			lastModified: '02/9/2013'
+		},
+		{
+			name: 'poster.docx',
+			size: '765 KB',
+			lastModified: '02/9/2013'
+		}
+	];
+
+	interface Programs {
+		[name: string]: string;
+	}
+
+	let programs: Programs = {
+		docx: 'Microsoft Word',
+		pdf: 'Adobe Acrobat',
+		pptx: 'Microsoft PowerPoint'
+	};
 </script>
 
 <h1 class="text-4xl font-bold">My Files</h1>
-<div
-	class={`my-10 flex h-[91%] w-[100%] flex-grow bg-base-200 transition-all duration-500 ease-in-out`}
->
+<div class={`my-8 flex flex-grow bg-base-200 transition-all duration-500 ease-in-out`}>
 	<!--Main Grid-->
-	<div class="grid flex-grow grid-flow-col grid-cols-3 grid-rows-4 gap-8">
+	<div class="grid h-[25%] flex-grow grid-flow-col grid-cols-3 grid-rows-4 gap-8">
 		<!--Nested Buttons Grid-->
 		<div class="col-span-2 grid h-full w-full grid-cols-5 gap-8">
 			<button
@@ -118,8 +159,70 @@
 				<h3 class="mt-2 text-xl font-bold">Miscellaneous</h3>
 			</button>
 		</div>
-		<!--Nested Buttons Grid-->
-		<div class="col-span-2 row-span-2 rounded-xl bg-base-100"></div>
+
+		<div class="col-span-2 row-span-2 overflow-y-scroll rounded-xl bg-base-100">
+			<div class="overflow-x-auto overflow-y-scroll">
+				<table class="table max-h-fit">
+					<!-- head -->
+					<thead class="hidden">
+						<tr>
+							<th>
+								<div class="form-control">
+									<label class="label cursor-pointer">
+										<input type="checkbox" class="checkbox-primary checkbox bg-base-100" />
+									</label>
+								</div>
+							</th>
+							<th>File Name</th>
+							<th>File Type</th>
+							<th>Last Modified</th>
+							<th></th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<!-- row 1 -->
+						{#each fakeData as data}
+							<tr>
+								<th>
+									<div class="form-control">
+										<label class="label cursor-pointer">
+											<input type="checkbox" class="checkbox-primary checkbox bg-base-100" />
+										</label>
+									</div>
+								</th>
+								<td>
+									<div class="flex items-center gap-3">
+										<div class="">
+											<div class="h-9 w-9">
+												{#if data.name.split('.')[1] === 'docx'}
+													<img src="/icons/ms-word.svg" alt="Microsoft Word" />
+												{:else if data.name.split('.')[1] === 'pdf'}
+													<img src="/icons/adobe-acrobat.svg" alt="PDF" />
+												{:else if data.name.split('.')[1] === 'pptx'}
+													<img src="/icons/ms-ppt.svg" alt="Microsoft PowerPoint" />
+												{:else if data.name.split('.')[1] === 'xlsx'}
+													<img src="/icons/ms-excel.svg" alt="Microsoft Excel" />
+												{/if}
+											</div>
+										</div>
+										<div>
+											<div class="font-bold">{data.name.split('.')[0]}</div>
+											<div class="text-sm opacity-50">{programs[data.name.split('.')[1]]}</div>
+										</div>
+									</div>
+								</td>
+								<td class="uppercase">{data.name.split('.')[1]} </td>
+								<td>{data.lastModified}</td>
+								<th>
+									<button class="btn-base-200 btn btn-xs">details</button>
+								</th>
+							</tr>
+						{/each}
+					</tbody>
+				</table>
+			</div>
+		</div>
 		<div class="col-start-3 row-span-3 bg-primary"></div>
 		<div class="col-span-3 row-start-4 bg-red-500"></div>
 	</div>

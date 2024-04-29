@@ -1,7 +1,7 @@
 # [EXPERIMENTAL] Tauri version of TagStudio
 
 <p align="center">
-  <img width="60%" src="github_header.png">
+  <img width="60%" src=".github/images/github_header.png">
 </p>
 
 > [!CAUTION]
@@ -13,6 +13,7 @@ This is a **_very_** cutdown version of the [Upstream Readme](https://github.com
 ## Contents
 
 - [Readme of Upstream Repo](https://github.com/CyanVoxel/TagStudio)
+- [Screenshots](#screenshots)
 - [Devstack](#devstack)
 - [Todo List](#todo)
 - [Building](#building)
@@ -25,6 +26,19 @@ This is a **_very_** cutdown version of the [Upstream Readme](https://github.com
 - [TailwindCSS](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
 - [Inlang's ParaglideJS](https://inlang.com/)
+
+## Screenshots
+
+You can take a look at the current stage of development over here without downloading and building the program.
+
+<details>
+<summary>Dashboard</summary>
+
+<p align="center">
+  <img width="100%" src=".github/images/tauri-tagstudio-2024-04-29.png">
+</p>
+
+</details>
 
 ## TODO
 
@@ -85,22 +99,24 @@ pnpm install
 ### Step 4.
 
 - You can now run a dev server, or build the project.
-> [!WARNING]
-> You may need the `WEBKIT_DISABLE_COMPOSITING_MODE=1` AND/OR `WEBKIT_DISABLE_DMABUF_RENDERER=1`enviroment variable while running the command below if you get a blank screen.
+  > [!WARNING]
+  > You may need the `WEBKIT_DISABLE_COMPOSITING_MODE=1` AND/OR `WEBKIT_DISABLE_DMABUF_RENDERER=1`enviroment variable while running the command below if you get a blank screen.
 
 ```
 pnpm tauri dev
 ```
 
 - Building and then running the project.
-> [!CAUTION]
-> Linux: It requires `NO_STRIP=true` as enviroment variable due to a bug in linuxdeploy, which is used to build .Appimage file.
+  > [!CAUTION]
+  > Linux: It requires `NO_STRIP=true` as enviroment variable due to a bug in linuxdeploy, which is used to build .Appimage file.
 
 ```
 pnpm tauri build
 ```
 
 ### Step 5.
+
 > [!WARNING]
 > You may need the `WEBKIT_DISABLE_COMPOSITING_MODE=1` AND/OR `WEBKIT_DISABLE_DMABUF_RENDERER=1` enviroment variable while running the command below if you get a blank screen.
+
 - Locate the binary in `/src-tauri/target/release/bundle`, pray and then run it.
