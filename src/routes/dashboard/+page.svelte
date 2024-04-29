@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Donut from '$components/Charts/Donut.svelte';
+
 	let selected = '0';
 
 	let fakeData = [
@@ -21,6 +23,11 @@
 			name: 'budget-estimate-Q1.xlsx',
 			size: '2 MB',
 			lastModified: '07/1/2024'
+		},
+		{
+			name: 'poster.docx',
+			size: '765 KB',
+			lastModified: '02/9/2013'
 		},
 		{
 			name: 'poster.docx',
@@ -156,12 +163,14 @@
 				</svg>
 
 				<p class="mt-4 text-sm">Total 3.9 GB</p>
-				<h3 class="mt-2 text-xl font-bold">Miscellaneous</h3>
+				<h3 class="mt-2 text-xl font-bold">Misc</h3>
 			</button>
 		</div>
 
-		<div class="col-span-2 row-span-2 overflow-y-scroll rounded-xl bg-base-100">
-			<div class="overflow-x-auto overflow-y-scroll">
+		<div
+			class="scrollbar-thumb-rounded-full scrollbar scrollbar-w-1 scrollbar-track-transparent scrollbar-thumb-primary col-span-2 row-span-2 mb-[-4rem] max-h-[100%] overflow-y-scroll rounded-xl bg-base-100"
+		>
+			<div class="overflow-x-auto">
 				<table class="table max-h-fit">
 					<!-- head -->
 					<thead class="hidden">
@@ -223,7 +232,78 @@
 				</table>
 			</div>
 		</div>
-		<div class="col-start-3 row-span-3 bg-primary"></div>
-		<div class="col-span-3 row-start-4 bg-red-500"></div>
+		<div
+			class="col-start-3 row-span-3 flex flex-col items-center justify-center rounded-xl bg-base-100"
+		>
+			<h2 class="m-6 self-start text-2xl font-bold">Storage</h2>
+			<div class="h-[100%] w-[90%]">
+				<Donut />
+			</div>
+		</div>
+		<div
+			class="scrollbar-thumb-rounded-full scrollbar scrollbar-w-1 scrollbar-track-transparent scrollbar-thumb-primary col-span-3 row-start-4 mb-[-18rem] max-h-[100%] overflow-y-scroll rounded-xl bg-base-100"
+		>
+			<div class="overflow-x-auto">
+				<table class="table max-h-fit">
+					<!-- head -->
+					<thead class="hidden">
+						<tr>
+							<th>
+								<div class="form-control">
+									<label class="label cursor-pointer">
+										<input type="checkbox" class="checkbox-primary checkbox bg-base-100" />
+									</label>
+								</div>
+							</th>
+							<th>File Name</th>
+							<th>File Type</th>
+							<th>Last Modified</th>
+							<th></th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<!-- row 1 -->
+						{#each fakeData as data}
+							<tr>
+								<th>
+									<div class="form-control">
+										<label class="label cursor-pointer">
+											<input type="checkbox" class="checkbox-primary checkbox bg-base-100" />
+										</label>
+									</div>
+								</th>
+								<td>
+									<div class="flex items-center gap-3">
+										<div class="">
+											<div class="h-9 w-9">
+												{#if data.name.split('.')[1] === 'docx'}
+													<img src="/icons/ms-word.svg" alt="Microsoft Word" />
+												{:else if data.name.split('.')[1] === 'pdf'}
+													<img src="/icons/adobe-acrobat.svg" alt="PDF" />
+												{:else if data.name.split('.')[1] === 'pptx'}
+													<img src="/icons/ms-ppt.svg" alt="Microsoft PowerPoint" />
+												{:else if data.name.split('.')[1] === 'xlsx'}
+													<img src="/icons/ms-excel.svg" alt="Microsoft Excel" />
+												{/if}
+											</div>
+										</div>
+										<div>
+											<div class="font-bold">{data.name.split('.')[0]}</div>
+											<div class="text-sm opacity-50">{programs[data.name.split('.')[1]]}</div>
+										</div>
+									</div>
+								</td>
+								<td class="uppercase">{data.name.split('.')[1]} </td>
+								<td>{data.lastModified}</td>
+								<th>
+									<button class="btn-base-200 btn btn-xs">details</button>
+								</th>
+							</tr>
+						{/each}
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</div>
 </div>

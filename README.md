@@ -35,7 +35,7 @@ You can take a look at the current stage of development over here without downlo
 <summary>Dashboard</summary>
 
 <p align="center">
-  <img width="100%" src=".github/images/tauri-tagstudio-2024-04-29.png">
+  <img width="100%" src=".github/images/tauri-tagstudio-2024-04-30.png">
 </p>
 
 </details>
