@@ -7,7 +7,6 @@ mod library;
 use std::path::PathBuf;
 
 use directories::ProjectDirs;
-use tauri::State;
 use tracing::{info, level_filters::LevelFilter};
 use tracing_subscriber::EnvFilter;
 
