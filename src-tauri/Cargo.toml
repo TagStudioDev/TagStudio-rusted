@@ -1,13 +1,10 @@
 [package]
-name = "app"
-version = "0.1.0"
+name = "tagstudio"
+version = "0.0.1"
 description = "A Tauri App"
 authors = ["CyanVoxel", "adamtmhun", "Xarvex"]
-license = ""
-repository = ""
-default-run = "app"
 edition = "2021"
-rust-version = "1.60"
+rust-version = "1.74.1" # checked with cargo-msrv
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -15,12 +12,16 @@ rust-version = "1.60"
 tauri-build = { version = "1.5.1", features = [] }
 
 [dependencies]
+directories = "5.0"
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
-tauri = { version = "1.6.2", features = [] }
+sqlx = { version = "0.7", features = ["chrono", "runtime-tokio", "sqlite"] }
+tauri = { version = "1.6", features = [] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem and the built-in dev server is disabled.
 # If you use cargo directly instead of tauri's cli you can use this feature flag to switch between tauri's `dev` and `build` modes.
 # DO NOT REMOVE!!
-custom-protocol = [ "tauri/custom-protocol" ]
+custom-protocol = ["tauri/custom-protocol"]

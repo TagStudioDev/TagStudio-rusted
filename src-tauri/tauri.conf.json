@@ -8,11 +8,13 @@
 	},
 	"package": {
 		"productName": "tagstudio",
-		"version": "0.1.0"
+		"version": "0.0.1"
 	},
 	"tauri": {
 		"allowlist": {
-			"all": false
+			"dialog": {
+				"open": true
+			}
 		},
 		"bundle": {
 			"active": true,
@@ -29,7 +31,7 @@
 				"icons/icon.icns",
 				"icons/icon.ico"
 			],
-			"identifier": "dev.tagstudio.tagstudio",
+			"identifier": "com.github.tagstudio.tagstudio",
 			"longDescription": "",
 			"macOS": {
 				"entitlements": null,
