@@ -35,6 +35,10 @@ Top Priority:
 - [ ] Expand Building Instructions
 - [ ] UI Layout and design
 - [ ] Have a mostly complete frontend
+  - [ ] Dashboard
+    - [x] Have file type Buttons
+    - [ ] Show stats for each filetype
+    - [ ] Most recent list at the bottom
 - [ ] Expanding this list
 
 Low Priority:

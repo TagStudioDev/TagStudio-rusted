@@ -60,7 +60,7 @@
 		</button>
 	</div>
 </div>
-<Sidebar {showSidebar} />
+<Sidebar {showSidebar}><slot></slot></Sidebar>
 
 <asd class="btn btn-primary fixed bottom-10 right-10 shadow-xl">
 	<svg

@@ -14,6 +14,9 @@ importers:
       '@tauri-apps/api':
         specifier: ^1.5.4
         version: 1.5.4
+      daisyui:
+        specifier: ^4.10.2
+        version: 4.10.2(postcss@8.4.38)
     devDependencies:
       '@inlang/paraglide-js':
         specifier: ^1.7.2
@@ -45,9 +48,6 @@ importers:
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.38)
-      daisyui:
-        specifier: ^4.10.2
-        version: 4.10.2(postcss@8.4.38)
       eslint:
         specifier: ^8.57.0
         version: 8.57.0

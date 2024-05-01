@@ -109,7 +109,7 @@
 		class={`flex transition-all duration-500 ease-in-out ${showSidebar ? 'm-5 mt-0 flex w-[87%]' : 'flex w-[100%]'}`}
 	>
 		<div
-			class={`h-full w-full flex-grow transition-all duration-500 ease-in-out ${showSidebar ? 'rounded-3xl' : ''} bg-base-200`}
+			class={`h-full w-full flex-grow transition-all duration-500 ease-in-out ${showSidebar ? 'rounded-3xl' : ''} bg-base-200 p-8`}
 		>
 			<slot />
 		</div>
