@@ -1,9 +1,25 @@
-use std::path::Path;
+use std::path::{Path, PathBuf};
 
 pub mod entry;
 pub mod tag;
 
 #[derive(Clone, Debug)]
-pub struct Library<'a> {
-    pub directories: Vec<&'a Path>,
+pub struct Location {
+    path: PathBuf,
+    name: Option<String>,
+}
+
+impl Location {
+    pub fn path(&self) -> &Path {
+        self.path.as_path()
+    }
+
+    pub fn name(&self) -> Option<&str> {
+        self.name.as_deref()
+    }
+}
+
+#[derive(Clone, Debug)]
+pub struct Library {
+    pub directories: Vec<Location>,
 }
