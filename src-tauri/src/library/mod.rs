@@ -1,7 +1,7 @@
 use std::path::Path;
 
-mod entry;
-mod tag;
+pub mod entry;
+pub mod tag;
 
 #[derive(Clone, Debug)]
 pub struct Library<'a> {
