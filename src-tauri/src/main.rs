@@ -61,6 +61,7 @@ fn main() {
     tauri::Builder::default()
         .manage(Application::new())
         .invoke_handler(tauri::generate_handler![command::greet])
+        .invoke_handler(tauri::generate_handler![command::library_open])
         .run(tauri::generate_context!())
         .expect("Failure running application");
 }
