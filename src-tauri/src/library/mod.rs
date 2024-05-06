@@ -1,7 +1,7 @@
-use std::path::{Path, PathBuf};
-
 pub mod entry;
 pub mod tag;
+
+use std::path::{Path, PathBuf};
 
 #[derive(Clone, Debug)]
 pub struct Location {
