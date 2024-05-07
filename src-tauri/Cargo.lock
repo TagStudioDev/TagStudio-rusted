@@ -3200,6 +3200,7 @@ dependencies = [
  "sqlx",
  "tauri",
  "tauri-build",
+ "thiserror",
  "tracing",
  "tracing-subscriber",
 ]
