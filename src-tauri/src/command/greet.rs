@@ -1,9 +1,7 @@
-use tauri::State;
-
-use crate::Application;
+use tauri::AppHandle;
 
 #[tauri::command]
-pub fn greet(name: &str, application: State<Application>) -> String {
-    dbg!(application);
+pub fn greet(name: &str, app_handle: AppHandle) -> String {
+    dbg!(app_handle.path_resolver());
     format!("Hello {} from Rust!", name)
 }
