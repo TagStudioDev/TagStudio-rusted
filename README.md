@@ -26,6 +26,7 @@ This is a **_very_** cutdown version of the [Upstream Readme](https://github.com
 - [TailwindCSS](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
 - [Inlang's ParaglideJS](https://inlang.com/)
+- [ApexCharts.JS](https://apexcharts.com/)
 
 ## Screenshots
 

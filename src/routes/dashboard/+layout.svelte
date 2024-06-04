@@ -24,7 +24,7 @@
 		</button>
 	</div>
 	<div class="flex-1">
-		<img alt="TagStudio" class="mx-3 mt-1 w-[9rem]" src="/ts-9-1_logo_text.png" />
+		<img alt="TagStudio" class="mx-3 mt-1 w-[9rem]" src="/tag-studio-logo-icon-text.png" />
 	</div>
 	<div class="flex-none">
 		<label class="input input-bordered flex items-center gap-2">

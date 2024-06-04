@@ -1,7 +1,10 @@
 <script lang="ts">
 	import Donut from '$components/Charts/Donut.svelte';
+	import ApexChart from '$lib/ApexChart.svelte';
 
 	let selected = '0';
+
+	$: chartWidth = 0;
 
 	let fakeData = [
 		{
@@ -49,6 +52,168 @@
 		docx: 'Microsoft Word',
 		pdf: 'Adobe Acrobat',
 		pptx: 'Microsoft PowerPoint'
+	};
+
+	$: chartOption = {
+		annotations: {},
+		chart: {
+			animations: {
+				enabled: true
+			},
+			foreColor: '#fff',
+			fontFamily: 'Roboto',
+			height: 700,
+			id: 'UrTLv',
+			stackOnlyBar: true,
+			toolbar: {
+				show: false
+			},
+			type: 'donut',
+			width: chartWidth
+		},
+		plotOptions: {
+			line: {
+				isSlopeChart: false
+			},
+			bar: {
+				borderRadius: 10,
+				borderRadiusApplication: 'end',
+				borderRadiusWhenStacked: 'last',
+				hideZeroBarsWhenGrouped: false,
+				isDumbbell: false,
+				isFunnel: false,
+				isFunnel3d: true,
+				dataLabels: {
+					total: {
+						enabled: false,
+						offsetX: 0,
+						offsetY: 0,
+						style: {
+							color: '#373d3f',
+							fontSize: '12px',
+							fontWeight: 600
+						}
+					}
+				}
+			},
+			bubble: {
+				zScaling: true
+			},
+			treemap: {
+				borderRadius: 4,
+				dataLabels: {
+					format: 'scale'
+				}
+			},
+			radialBar: {
+				hollow: {
+					background: '#fff'
+				},
+				dataLabels: {
+					name: {},
+					value: {},
+					total: {}
+				},
+				barLabels: {
+					enabled: false,
+					margin: 5,
+					useSeriesColors: true,
+					fontWeight: 600,
+					fontSize: '16px'
+				}
+			},
+			pie: {
+				donut: {
+					labels: {
+						name: {},
+						value: {},
+						total: {}
+					}
+				}
+			}
+		},
+		dataLabels: {
+			enabled: false,
+			style: {
+				fontWeight: 900
+			}
+		},
+		fill: {
+			opacity: 1
+		},
+		grid: {
+			borderColor: '#6e7eaa',
+			padding: {
+				right: 25,
+				left: 20
+			}
+		},
+		labels: ['A', 'B', 'C', 'D', 'E'],
+		legend: {
+			position: 'bottom',
+			fontSize: 14,
+			offsetY: 8,
+			markers: {
+				strokeColor: '#FFFFFF',
+				radius: 5
+			},
+			itemMargin: {
+				horizontal: 19,
+				vertical: 18
+			}
+		},
+		series: [11, 24, 32, 13, 32],
+		stroke: {
+			fill: {
+				type: 'solid',
+				opacity: 0.85,
+				gradient: {
+					shade: 'dark',
+					type: 'horizontal',
+					shadeIntensity: 0.5,
+					inverseColors: true,
+					opacityFrom: 1,
+					opacityTo: 1,
+					stops: [0, 50, 100],
+					colorStops: []
+				}
+			}
+		},
+		tooltip: {
+			hideEmptySeries: false,
+			fillSeriesColor: true,
+			theme: 'dark'
+		},
+		xaxis: {
+			labels: {
+				trim: true,
+				style: {}
+			},
+			group: {
+				groups: [],
+				style: {
+					colors: [],
+					fontSize: '12px',
+					fontWeight: 400,
+					cssClass: ''
+				}
+			},
+			title: {
+				style: {
+					fontWeight: 700
+				}
+			}
+		},
+		yaxis: {
+			labels: {
+				style: {}
+			},
+			title: {
+				style: {
+					fontWeight: 700
+				}
+			}
+		}
 	};
 </script>
 
@@ -168,7 +333,7 @@
 		</div>
 
 		<div
-			class="scrollbar-thumb-rounded-full scrollbar scrollbar-w-1 scrollbar-track-transparent scrollbar-thumb-primary col-span-2 row-span-2 mb-[-4rem] max-h-[100%] overflow-y-scroll rounded-xl bg-base-100"
+			class="col-span-2 row-span-2 mb-[-4rem] max-h-[100%] overflow-y-scroll rounded-xl bg-base-100 scrollbar scrollbar-track-transparent scrollbar-thumb-primary scrollbar-thumb-rounded-full scrollbar-w-1"
 		>
 			<div class="overflow-x-auto">
 				<table class="table max-h-fit">
@@ -233,15 +398,15 @@
 			</div>
 		</div>
 		<div
-			class="col-start-3 row-span-3 flex flex-col items-center justify-center rounded-xl bg-base-100"
+			class="col-start-3 row-span-3 hidden flex-col items-center justify-center rounded-xl bg-base-100 2xl:flex"
 		>
 			<h2 class="m-6 self-start text-2xl font-bold">Storage</h2>
-			<div class="h-[100%] w-[90%]">
-				<Donut />
+			<div class="h-[100%] w-[90%]" bind:offsetWidth={chartWidth}>
+				<ApexChart options={chartOption} />
 			</div>
 		</div>
 		<div
-			class="scrollbar-thumb-rounded-full scrollbar scrollbar-w-1 scrollbar-track-transparent scrollbar-thumb-primary col-span-3 row-start-4 mb-[-18rem] max-h-[100%] overflow-y-scroll rounded-xl bg-base-100"
+			class="col-span-3 row-start-4 mb-[-18rem] max-h-[100%] overflow-y-scroll rounded-xl bg-base-100 scrollbar scrollbar-track-transparent scrollbar-thumb-primary scrollbar-thumb-rounded-full scrollbar-w-1"
 		>
 			<div class="overflow-x-auto">
 				<table class="table max-h-fit">
