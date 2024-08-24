@@ -31,6 +31,8 @@
     <a href="https://github.com/TagStudioDev/TagStudioRusted/releases">Releases</a>
     ·
     <a href="https://github.com/TagStudioDev/TagStudioRusted/issues/new?template=bug_report.yml&projects=&title=%5BBug%5D:+&labels=Type:+Bug&assignees=">Report Bug</a>
+    ·
+    <a href="https://github.com/TagStudioDev/TagStudio">Visit The OG Version</a>
   </p>
 </div>
 
@@ -45,18 +47,15 @@
       <a href="#philosophy">Philosophy</a><ul><li><a href="#goals">Goals</a></li><li><a href="#priorities">Priorities</a></li></ul></li>
       </ul>
     </li>
-        <li><a href="#features">Features</a>
+        <li><a href="#roadmap--featureset">Roadmap & Featureset</a>
         <ul>
-        <li><a href="#current-features">Current Features</a></li>
+        <li><a href="#top-priority">Top Priority</a></li>
+        <li><a href="#low-priority">Low Priority</a></li>
         <li>
-      <a href="#planned-features">Planned Features</a><ul>
-        <li><a href="#priority-features">Priority</a></li>
-        <li>
-      <a href="#future-features">Future</a></li><li><a href="#features-off-the-table">Off The Table</a></li></ul></li></ul>
+      <a href="#request-a-feature">Request a Feature</a></li></ul></li></ul>
         </li>
-        <li><a href="#installation">Installation</a><ul><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#downloading-and-setup">Downloading And Setup</a></li></ul></li>
+        <li><a href="#installation">Installation</a><ul><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#building-from-source">Building from Source</a></li></ul></li>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#social--contact">Social & Contact</a></li>
@@ -70,7 +69,7 @@
 > <ins><strong>THIS IS AN EXPERIMENTAL, UNCOMPLETED, PRE-ALPHA VERSION </ins></strong> <br />
 > Please be aware, that this is not anywhere near to be released. Eventually we are planning to replace the upstream python version with TagStudioRusted, but that is still far away. Until an actually useable alpha release, TagStudioRusted is recommended for Contributors only.
 
-[Product Name Screen Shot][product-screenshot]
+[Product Name Screenshot][product-screenshot]
 <p align="right"><i>Current Dashboard of TagStudioRusted running on (Arch) Linux</i></p>
 
 TagStudio is a photo & file organization application with an underlying system that focuses on giving freedom and flexibility to the user. No proprietary programs or formats, no sea of sidecar files, and no complete upheaval of your filesystem structure.
@@ -120,97 +119,45 @@ TagStudio is not a product. It is an *idea*. Here are the boundaries that define
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Features
-
-This section lists the current and furure featureset TagStudio operates or will operate with.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Current Features
+## Roadmap & Featureset
 
 > [!NOTE]
-> These are the currently available features, if you download the lates available preview build. There are a lot more planned features.
-
-- Create libraries/vaults centered around a system directory. Libraries contain a series of entries: the representations of your files combined with metadata fields. Each entry represents a file in your library’s directory, and is linked to its location.
-- Add metadata to your library entries, including:
-  - Name, Author, Artist (Single-Line Text Fields)
-  - Description, Notes (Multiline Text Fields)
-  - Tags, Meta Tags, Content Tags (Tag Boxes)
-- Create rich tags composed of a name, a list of aliases, and a list of “subtags” - being tags in which these tags inherit values from.
-- Search for entries based on tags, ~~metadata~~ (TBA), or filenames/filetypes (using `filename: <query>`)
-- Special search conditions for entries that are: `untagged`/`no tags` and `empty`/`no fields`.
-
-> [!TIP]
-> For more information on the project itself, please see the [FAQ](#faq) section as well as the [documentation](/doc/index.md).
+> This list is being expanded as we move forward with the project. Not all planned features are listed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Planned Features
+### Top Priority
 
-> [!IMPORTANT]
-> See the [Planned Features](/doc/updates/planned_features.md) documentation for the latest feature lists. The lists here are currently being migrated over there with individual pages for larger features.
+- [x] Have a working window
+- [x] Build the app i18n ready (continous)
+- [ ] Expand Building Instructions
+- [ ] UI Layout and design
+- [ ] Have a mostly complete frontend
+- [ ] Expanding this list
 
-Of the several features planned for the project, these are broken up into “priority” features and “future” features. Priority features were originally intended for the first public release, however are currently absent from the Alpha v9.x.x builds.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-#### Priority Features
-
-- Improved search
-  - Sortable Search
-  - Boolean Search
-  - Coexisting Text + Tag Search
-  - Searchable File Metadata
-- Comprehensive Tag management tab
-- Easier ways to apply tags in bulk
-  - Tag Search Panel
-  - Recent Tags Panel
-  - Top Tags Panel
-  - Pinned Tags Panel
-- Better (stable, performant) library grid view
-- Improved entry relinking
-- Cached thumbnails
-- Tag-like Groups
-- Resizable thumbnail grid
-- User-defined metadata fields
-- Multiple directory support
-- SQLite (or similar) save files
-- Reading of EXIF and XMP fields
-- Improved UI/UX
-- Better internal API for accessing Entries, Tags, Fields, etc. from the library.
-- Proper testing workflow
-- Continued code cleanup and modularization
-- Exportable/importable library data including "Tag Packs"
+- [ ] LATER: Replace TagStudio upstream with TagStudioRusted
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-#### Future Features
+### Low Priority
 
-- Support for multiple simultaneous users/clients
-- Draggable files outside the program
-- Comprehensive filetype whitelist
-- A finished “macro system” for automatic tagging based on predetermined criteria.
-- Different library views
-- Date and time fields
-- Entry linking/referencing
-- Audio waveform previews
-- 3D object previews
-- Additional previews for miscellaneous file types
-- Optional global tags and settings, spanning across libraries
-- Importing & exporting libraries to/from other programs
-- Port to a more performant language and modern frontend (Rust?, Tauri?, etc.)
-- Plugin system
-- Local OCR search
-- Support for local machine learning-based tag suggestions for images
+- [ ] Start working on backend (only after having a somewhat useable frontend)
+- [ ] Translations
+  - [x] English (native)
+  - [ ] German
+  - [ ] French
+  - [ ] Spanish
+  - [ ] Make a template for community translations
+- [ ] Themes
+  - [ ] Additional Themes
+  - [ ] Easy Theme Hue Adjustion
+  - [ ] Fully Custom Themes
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-#### Features Off The Table
+### Request a Feature
 
-- Native Cloud Integration
-  - There are plenty of services already (native or third-party) that allow you to mount your cloud drives as virtual drives on your system. Pointing TagStudio to one of these mounts should function similarly to what native integration would look like.
-- Native ChatGPT/Non-Local LLM Integration
-  - This could mean different things depending on what you're intending. Whether it's trying to use an LLM to replace the native search, or to trying to use a model for image recognition, we're not interested in hooking people's TagStudio libraries into non-local LLMs such as ChatGPT and/or turn the program into a "chatbot" interface (see: [Goals/Privacy](#goals)). We wouldn't, however, mind using **locally** hosted models to provide the _optional_ ability for additional searching and tagging methods (especially when it comes to facial recognition).
+We currently accept no feature requests. Our top priority is to match the featureset of the upstream python version first.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -222,161 +169,89 @@ This section will guide you through the requirements and installation of TagStud
 
 ### Prerequisites
 
-System Support:
+> [!CAUTION]
+> There are currently no official builds for the project yet. We do, however develop TagStudioRusted with Cross-platform support in mind. You can build then project for yourself on any platform, and open a Bug Report issue in case you find something unusual. After we get to a point, where this build is *somewhat* usable, we will have prebuilt binaries available to download.
+
+Binaries System Support:
 
 |        | [![Windows][win]][win-url] | [![Mac][macos]][macos-url]| [![Linux][linux]][linux-url] |
 | :----: | :-------------: | :-----------: | :-------------: |
-| x86_64 |  ✅ | ✅ | ✅ |
-| ARM | ❌ | ✅ | ❌ |
-| Portable | ✅ | ❌ | ✅ |
+| x86_64 |  ❌ | ❌ | ❌ |
+| ARM | ❌ | ❌ | ❌ |
+| Portable | ❌ | ❌ | ❌ |
 
 Feel free to build the project for the architecture and OS you need.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-#### Launching/Building From Source
-
-See instructions in the "[Creating Development Environment](/CONTRIBUTING.md/#creating-a-development-environment)" section from the [contribution documentation](/CONTRIBUTING.md).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Downloading and Setup
-
-To download TagStudio, visit the [Releases](https://github.com/TagStudioDev/TagStudioRusted/releases) section of the GitHub repository and download the latest release for your system under the "Assets" section.
-
-> [!IMPORTANT]
-> On macOS, you may be met with a message saying __""TagStudio" can't be opened because Apple cannot check it for malicious software."__ If you encounter this, then you'll need to go to the "Settings" app, navigate to "Privacy & Security", and scroll down to a section that says __""TagStudio" was blocked from use because it is not from an identified developer."__ Click the "Open Anyway" button to allow TagStudio to run. You should only have to do this once after downloading the application.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-#### Optional Arguments
-
-Optional arguments to pass to the program.
-
-> `--open <path>` / `-o <path>`
-> Path to a TagStudio Library folder to open on start.
-
-> `--config-file <path>` / `-c <path>`
-> Path to the TagStudio config file to load.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Usage
-
-### Creating/Opening a Library
-
-With TagStudio opened, start by creating a new library or opening an existing one using File -> Open/Create Library from the menu bar. TagStudio will automatically create a new library from the chosen directory if one does not already exist. Upon creating a new library, TagStudio will automatically scan your folders for files and add those to your library (no files are moved during this process!).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Refreshing the Library
-
-In order to scan for new files or file changes, you’ll need to manually go to File -> Refresh Directories.
+## Building from Source
 
 > [!NOTE]
-> In the future, library refreshing will also be automatically done in the background, or additionally on app startup.
+> This is currently the only installation method.
+
+Thanks Tauri's documentation, the OS specific installations are documented there.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Adding Metadata to Entries
+### Step 1.
 
-To add a metadata field to a file entry, start by clicking the “Add Field” button under the file preview in the right-hand preview panel. From the dropdown menu, select the type of metadata field you’d like to add to the entry.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Editing Metadata Fields
-
-#### Text Line / Text Box
-
-Hover over the field and click the pencil icon. From there, add or edit text in the dialog box popup.
+- Installing Tauri and Rust according to **[Tauri's documentation](https://tauri.app/v1/guides/getting-started/prerequisites)**
+- We also intend to use a JavaScript frontend framework, so **we need Node.js installed** as well (also in the docs above).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-#### Tag Box
+### Step 2.
 
-Click the “+” button at the end of the Tags list, and search for tags to add inside the new dialog popup. Click the “+” button next to whichever tags you want to add. Alternatively, after you search for a tag, press the Enter/Return key to add the add the first item in the list. Press Enter/Return once more to close the dialog box
+- Cloning the project
 
+```
+git clone https://github.com/TagStudioDev/TagStudioRusted.git
+cd TagStudioRusted
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Step 3.
+
+- Installing packages
+- We recommend using [pnpm](https://pnpm.io/) as package manager. It's fast, space efficient. It's just better.
+
+```
+pnpm install
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Step 4.
+
+- You can now run a dev server, or build the project.
 > [!WARNING]
-> Keyboard control and navigation is currently _very_ buggy, but will be improved in future versions.
+> You may need the `WEBKIT_DISABLE_COMPOSITING_MODE=1` AND/OR `WEBKIT_DISABLE_DMABUF_RENDERER=1`enviroment variable while running the command below if you get a blank screen.
+
+```
+pnpm tauri dev
+```
+
+- Building and then running the project.
+> [!CAUTION]
+> Linux: It requires `NO_STRIP=true` as enviroment variable due to a bug in linuxdeploy, which is used to build .Appimage file.
+
+```
+pnpm tauri build
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Creating Tags
-
-To create a new tag, click on Edit -> New Tag from the menu bar. From there, enter a tag name, shorthand name, any tag aliases separated by newlines, any subtags, and an optional color.
-
-- The tag **shorthand** is a type of alias that displays in situations when screen space is more valuable (ex. as a subtag for other tags).
-- **Aliases** are alternate names for a tag. These let you search for terms other than the exact tag name in order to find the tag again.
-- **Subtags** are tags in which this tag is a child tag of. In other words, tags under this section are parents of this tag. For example, if you had a tag for a character from a show, you would make the show a subtag of this character. This would display as “Character (Show)” in most areas of the app. The first tag in this list is used as the tag shown in parentheses for specification.
-- The **color** dropdown lets you select an optional color for this tag to display as.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Editing Tags
-
-To edit a tag, right-click the tag in the tag field of the preview pane and select “Edit Tag”
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Relinking Renamed/Moved Files
-
-Inevitably, some of the files inside your library will be renamed, moved, or deleted. If a file has been renamed or moved, TagStudio will display the thumbnail as a red tag with a cross through it _(this icon is also used for items with broken thumbnails)._ To relink moved files or delete these entries, go to Tools -> Manage Unlinked Entries. Click the “Refresh” button to scan your library for unlinked entries. Once complete, you can attempt to “Search & Relink” any unlinked entries to their respective files, or “Delete Unlinked Entries” in the event the original files have been deleted and you no longer wish to keep their metadata entries inside your library.
-
+### Step 5.
 > [!WARNING]
-> There is currently no method to relink entries to files that have been renamed - only moved or deleted. This is a top priority for future releases.
-
-> [!WARNING]
-> If multiple matches for a moved file are found (matches are currently defined as files with a matching filename as the original), TagStudio will currently ignore the match groups. Adding a GUI for manual selection, as well as smarter automated relinking, are top priorities for future versions.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Saving the Library
-
-Libraries are saved upon exiting the program. To manually save, select File -> Save Library from the menu bar. To save a backup of your library, select File -> Save Library Backup from the menu bar.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Half-Implemented Features
-
-#### Fix Duplicate Files
-
-Load in a .dupeguru file generated by [dupeGuru](https://github.com/arsenetar/dupeguru/) and mirror metadata across entries marked as duplicates. After mirroring, return to dupeGuru to manage deletion of the duplicate files. After deletion, use the “Fix Unlinked Entries” feature in TagStudio to delete the duplicate set of entries for the now-deleted files
-
-> [!CAUTION]
-> While this feature is functional, it’s a pretty roundabout process and can be streamlined in the future.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-#### Image Collage
-
-Create an image collage of your photos and videos.
-
-> [!CAUTION]
-> Collage sizes and options are hardcoded, and there's no GUI indicating the process of the collage creation.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-#### Macros
-
-Apply tags and other metadata automatically depending on certain criteria. Set specific macros to run when the files are added to the library. Part of this includes applying tags automatically based on parent folders.
-
-> [!CAUTION]
-> Macro options are hardcoded, and there’s currently no way for the user to interface with this (still incomplete) system at all.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-#### Gallery-dl Sidecar Importing
-
-Import JSON sidecar data generated by [gallery-dl](https://github.com/mikf/gallery-dl).
-
-> [!CAUTION]
-> This feature is not supported or documented in any official capacity whatsoever. It will likely be rolled-in to a larger and more generalized sidecar importing feature in the future.
+> You may need the `WEBKIT_DISABLE_COMPOSITING_MODE=1` AND/OR `WEBKIT_DISABLE_DMABUF_RENDERER=1` enviroment variable while running the command below if you get a blank screen.
+- Locate the binary in `/src-tauri/target/release/bundle`, pray and then run it.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contributing
 
-If you're interested in contributing to TagStudio, please take a look at the [contribution guidelines](/CONTRIBUTING.md) for how to get started!
+Please feel free to contribute according to our Roadmap and Bug Reports. Thank you for helping enchancing TagStudioRusted further!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -418,7 +293,7 @@ Project Link: [https://github.com/TagStudioDev/TagStudioRusted](https://github.c
 [win-url]: https://youtu.be/toTtunvlqE4?si=5yJDWt9QkzAIbbYG
 [macos]: https://img.shields.io/badge/MacOS-000000?style=for-the-badge&logo=apple&logoColor=white
 [macos-url]: https://youtu.be/aE9_olxc-cA?si=K2pIs7CfkLD71qVv
-[linux]: https://img.shields.io/badge/Linux-000000?style=for-the-badge&logo=linux&logoColor=yellow
+[linux]: https://img.shields.io/badge/Linux-yellow?style=for-the-badge&logo=linux&logoColor=000000
 [linux-url]: https://en.wikipedia.org/wiki/Linux
 
 [discord]: https://img.shields.io/badge/Discord_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white
@@ -437,7 +312,7 @@ Project Link: [https://github.com/TagStudioDev/TagStudioRusted](https://github.c
 [issues-url]: https://github.com/TagStudioDev/TagStudioRusted/issues
 [license-shield]: https://img.shields.io/github/license/TagStudioDev/TagStudioRusted.svg?style=for-the-badge
 [license-url]: https://github.com/TagStudioDev/TagStudioRusted/blob/master/LICENSE.txt
-[product-screenshot]: screenshot.jpg
+[product-screenshot]: .github/images/tauri-tagstudio-current.png
 [qt]: https://img.shields.io/badge/Qt_For_Python-000000?style=for-the-badge&logo=qt&logoColor=white
 [qt-url]: https://doc.qt.io/qtforpython-6/
 [python-url]: https://python.org/
