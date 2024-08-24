@@ -66,8 +66,8 @@
 
 ## About The Project
 
-> [!WARNING]
-> <ins><strong>THIS IS AN EXPERIMENTAL, UNCOMPLETED, PRE-ALPHA VERSION </ins></strong>
+> [!CAUTION]
+> <ins><strong>THIS IS AN EXPERIMENTAL, UNCOMPLETED, PRE-ALPHA VERSION </ins></strong> <br />
 > Please be aware, that this is not anywhere near to be released. Eventually we are planning to replace the upstream python version with TagStudioRusted, but that is still far away. Until an actually useable alpha release, TagStudioRusted is recommended for Contributors only.
 
 [Product Name Screen Shot][product-screenshot]
@@ -81,7 +81,8 @@ TagStudio is a photo & file organization application with an underlying system t
 
 * [![Tauri][tauri]][tauri-url]
 * [![Rust][rust]][rust-url]
-* [![SvelteKit][sveltekit]][sveltekit-url] w/ [![Typescript][typescript]][typescript-url]
+* [![SvelteKit][sveltekit]][sveltekit-url]
+* [![Typescript][typescript]][typescript-url]
 * [![TailwindCSS][tailwind]][tailwind-url]
 * [![DaisyUI][daisy]][daisy-url]
 * [![Paraglide][paraglide]][paraglide-url]
@@ -441,7 +442,19 @@ Project Link: [https://github.com/TagStudioDev/TagStudioRusted](https://github.c
 [qt-url]: https://doc.qt.io/qtforpython-6/
 [python-url]: https://python.org/
 [python]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=ffc331
-[sqlite]: https://img.shields.io/badge/Sqlite-f2f2f2?style=for-the-badge&logo=sqlite&logoColor=003B57
+[sqlite]: https://img.shields.io/badge/Sqlite-003B57?style=for-the-badge&logo=sqlite&logoColor=f2f2f2
 [sqlite-url]: https://sqlite.org/
-[tauri]: https://img.shields.io/badge/Tauri-yellow?style=for-the-badge&logo=sqlite&logoColor=24C8D8
+[tauri]: https://img.shields.io/badge/Tauri-0d798f?style=for-the-badge&logo=tauri&logoColor=d6ae0d
 [tauri-url]: https://tauri.app/
+[rust]: https://img.shields.io/badge/Rust-bd4606?style=for-the-badge&logo=rust&logoColor=black
+[rust-url]: https://rustlang.org/
+[sveltekit]: https://img.shields.io/badge/Sveltekit-gray?style=for-the-badge&logo=svelte&logoColor=FF3E00
+[sveltekit-url]: https://kit.svelte.dev/
+[typescript]: https://img.shields.io/badge/Typescript-000000?style=for-the-badge&logo=typescript&logoColor=3178C6
+[typescript-url]: https://typescript.org/
+[tailwind]: https://img.shields.io/badge/TailwindCss-gray?style=for-the-badge&logo=tailwindcss&logoColor=06B6D4
+[tailwind-url]: https://tailwindcss.com/
+[daisy]: https://img.shields.io/badge/DaisyUI-5A0EF8?style=for-the-badge&logo=daisyui&logoColor=white
+[daisy-url]: https://daisyui.com/
+[paraglide]: https://img.shields.io/badge/Paraglide-f2f2f2?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBVcGxvYWRlZCB0bzogU1ZHIFJlcG8sIHd3dy5zdmdyZXBvLmNvbSwgR2VuZXJhdG9yOiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4NCjxzdmcgZmlsbD0iIzAwMDAwMCIgaGVpZ2h0PSI4MDBweCIgd2lkdGg9IjgwMHB4IiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIA0KCSB2aWV3Qm94PSIwIDAgNjEyIDYxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBkPSJNNTM4LjIwMywyMTEuMzUzQzUzNi41NDcsOTQuNTU2LDQzMy4wMDMsMCwzMDUuODkzLDBDMTc3Ljc1LDAsNzMuNSw5Ni4wODEsNzMuNSwyMTQuMThjMCwwLjEwOCwwLjAyOCwwLjIwNCwwLjAzMSwwLjMxMg0KCQljMC4wMTEsMC41MywwLjA4OCwxLjA1NSwwLjE1OSwxLjU4NWMwLjA1NCwwLjQwNSwwLjA4NSwwLjgxNywwLjE3MywxLjIxMWMwLjEwMiwwLjQ1NCwwLjI2NywwLjg5LDAuNDE0LDEuMzM2DQoJCWMwLjE0NywwLjQ0NSwwLjI3NSwwLjg5MywwLjQ2NSwxLjMxOWMwLjE2NCwwLjM2OSwwLjM4NiwwLjcxNywwLjU4NCwxLjA3N2MwLjI1OCwwLjQ2NSwwLjUwOCwwLjkzLDAuODE3LDEuMzYxDQoJCWMwLjA2MiwwLjA4OCwwLjA5NiwwLjE4NCwwLjE2MiwwLjI2OWwxODQuNTMyLDI0Ny44MTJsLTIyLjMzOCwxMy4wNDNjLTYuNzYzLDMuOTUtOS4wNDIsMTIuNjI5LTUuMDk1LDE5LjM5Mg0KCQljMi42MzcsNC41MTcsNy4zODEsNy4wMzIsMTIuMjU4LDcuMDMyYzIuNDI3LDAsNC44ODgtMC42MjcsNy4xMzQtMS45MzdsMTQuNzA1LTguNTg2djQwLjMxMnY1OC4xMDINCgkJYzAsNy44MzIsNi4zNDksMTQuMTc4LDE0LjE3OCwxNC4xNzhzMTQuMTc4LTYuMzQ2LDE0LjE3OC0xNC4xNzh2LTQzLjkyNWgyMC4zMjh2NDMuOTI1YzAsNy44MzIsNi4zNDksMTQuMTc4LDE0LjE3OCwxNC4xNzgNCgkJczE0LjE3OC02LjM0NiwxNC4xNzgtMTQuMTc4VjUzOS43MnYtMzguNDY0bDExLjU0Myw2Ljc0YzIuMjQ5LDEuMzEsNC43MDcsMS45MzcsNy4xMzQsMS45MzdjNC44NzcsMCw5LjYyNC0yLjUxOCwxMi4yNTgtNy4wMzINCgkJYzMuOTUtNi43NjMsMS42NjctMTUuNDQyLTUuMDk1LTE5LjM5MmwtMjAuMTM1LTExLjc1NmwxODUuNDkxLTI0OS4xQzUzOC4yNDksMjE5LjI3OSw1MzguOTgzLDIxNS4xNyw1MzguMjAzLDIxMS4zNTN6DQoJCSBNMzM0Ljk2LDM5Ny40NzFjLTUuNjIzLTEwLjIwOC0xNi40ODMtMTcuMTQxLTI4LjkzNi0xNy4xNDFjLTEyLjQ1NCwwLTIzLjMxNCw2LjkzNi0yOC45MzYsMTcuMTQxbC00Mi4wNDgtMTY5LjExM2gxNDEuOTY4DQoJCUwzMzQuOTYsMzk3LjQ3MXogTTExNS45MTEsMjI4LjM1OGg4OS45MTFsNDUuMDY4LDE4MS4yNjZMMTE1LjkxMSwyMjguMzU4eiBNNDA2LjIyNCwyMjguMzU4aDg5LjkwOEwzNjEuMTU3LDQwOS42MjENCgkJTDQwNi4yMjQsMjI4LjM1OHoiLz4NCjwvZz4NCjwvc3ZnPg==
+[paraglide-url]: https://inlang.com/m/gerre34r/library-inlang-paraglideJs
