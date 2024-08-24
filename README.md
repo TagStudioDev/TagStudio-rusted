@@ -67,15 +67,11 @@
 ## About The Project
 
 > [!WARNING]
-> __**Low Budget Ad Warning**__ <br />
-> Hey Hey Hey! We also have a **Rust** fork, that is planned to eventually phase out the current upstream python version. Soon we will be accepting contributions. [Learn more here](https://github.com/TagStudioDev/TagStudioRustedRusted)
+> <ins><strong>THIS IS AN EXPERIMENTAL, UNCOMPLETED, PRE-ALPHA VERSION </ins></strong>
+> Please be aware, that this is not anywhere near to be released. Eventually we are planning to replace the upstream python version with TagStudioRusted, but that is still far away. Until an actually useable alpha release, TagStudioRusted is recommended for Contributors only.
 
-> [!CAUTION]
-> This started as a **_very_** rough personal project of mine, and it was open sourced due to the community. It is still in its infancy. Open sourcing also helps accept contributors sooner and to better facilitate the direction of the project from an earlier stage.
-> There **_are_** bugs, and there will **_very likely_** be breaking changes!
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-<p align="right"><i>TagStudio Alpha v9.1.0 running on Windows 10.</i></p>
+[Product Name Screen Shot][product-screenshot]
+<p align="right"><i>Current Dashboard of TagStudioRusted running on (Arch) Linux</i></p>
 
 TagStudio is a photo & file organization application with an underlying system that focuses on giving freedom and flexibility to the user. No proprietary programs or formats, no sea of sidecar files, and no complete upheaval of your filesystem structure.
 
@@ -83,8 +79,12 @@ TagStudio is a photo & file organization application with an underlying system t
 
 ### Built With
 
-* [![Python][python]][python-url]
-* [![Qt for Python][qt]][qt-url]
+* [![Tauri][tauri]][tauri-url]
+* [![Rust][rust]][rust-url]
+* [![SvelteKit][sveltekit]][sveltekit-url] w/ [![Typescript][typescript]][typescript-url]
+* [![TailwindCSS][tailwind]][tailwind-url]
+* [![DaisyUI][daisy]][daisy-url]
+* [![Paraglide][paraglide]][paraglide-url]
 * [![SQLite][sqlite]][sqlite-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -443,3 +443,5 @@ Project Link: [https://github.com/TagStudioDev/TagStudioRusted](https://github.c
 [python]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=ffc331
 [sqlite]: https://img.shields.io/badge/Sqlite-f2f2f2?style=for-the-badge&logo=sqlite&logoColor=003B57
 [sqlite-url]: https://sqlite.org/
+[tauri]: https://img.shields.io/badge/Tauri-yellow?style=for-the-badge&logo=sqlite&logoColor=24C8D8
+[tauri-url]: https://tauri.app/
