@@ -1,7 +1,5 @@
 <script lang="ts">
 	export let showSidebar;
-	import * as m from '$paraglide/messages';
-	import { languageTag } from '$paraglide/runtime';
 	import { page } from '$app/stores';
 </script>
 
