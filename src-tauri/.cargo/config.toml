@@ -1,0 +1,3 @@
+[env]
+# this file is committed, do not put sensitive variables here
+DATABASE_URL="sqlite:.cargo/library.sqlite"
