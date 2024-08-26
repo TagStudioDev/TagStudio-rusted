@@ -1,70 +1,5 @@
 <a id="readme-top"></a>
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![License][license-shield]][license-url]
-
-<br />
-<div align="center">
-  <a href="https://github.com/TagStudioDev/TagStudioRusted">
-    <img src="github_header.png" alt="TagStudioAlpha">
-  </a>
-
-<h1 align="center">TagStudio</h1>
-  <p align="center">
-    An <ins><strong>EXPERIMENTAL</strong></ins> Rust Rewrite of TagStudio, <br />
-    A User-Focused Photo & File Organizing System
-    <br />
-    <a href="https://discord.gg/hRNnVKhF2G"><strong>Join The Discord</strong>
-    <br />
-    <br />
-    <a href="https://github.com/TagStudioDev/TagStudioRusted/releases">Releases</a>
-    ·
-    <a href="https://github.com/TagStudioDev/TagStudioRusted/issues/new?template=bug_report.yml&projects=&title=%5BBug%5D:+&labels=Type:+Bug&assignees=">Report Bug</a>
-    ·
-    <a href="https://github.com/TagStudioDev/TagStudio">Visit The OG Version</a>
-  </p>
-</div>
-
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-        <li>
-      <a href="#philosophy">Philosophy</a><ul><li><a href="#goals">Goals</a></li><li><a href="#priorities">Priorities</a></li></ul></li>
-      </ul>
-    </li>
-        <li><a href="#roadmap--featureset">Roadmap & Featureset</a>
-        <ul>
-        <li><a href="#top-priority">Top Priority</a></li>
-        <li><a href="#low-priority">Low Priority</a></li>
-        <li>
-      <a href="#request-a-feature">Request a Feature</a></li></ul></li></ul>
-        </li>
-        <li><a href="#installation">Installation</a><ul><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#building-from-source">Building from Source</a></li></ul></li>
-    </li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#social--contact">Social & Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-## About The Project
-
 > [!CAUTION]
 > <ins><strong>THIS IS AN EXPERIMENTAL, UNCOMPLETED, PRE-ALPHA VERSION </ins></strong> <br />
 > Please be aware, that this is not anywhere near to be released. Eventually we are planning to replace the upstream python version with TagStudioRusted, but that is still far away. Until an actually useable alpha release, TagStudioRusted is recommended for Contributors only.
@@ -112,14 +47,8 @@ TagStudio is not a product. It is an *idea*. Here are the boundaries that define
 
 #### Priorities
 
-1. **The concept.** Even if TagStudio as a project or application fails, I’d hope that the idea lives on in a superior project. The [goals](#goals) outlined above don’t reference TagStudio once - _TagStudio_ is what references the _goals._
-2. **The system.** Frontends and implementations can vary, as they should. The core underlying metadata management system is what should be interoperable between different frontends, programs, and operating systems. A standard implementation for this should settle as development continues. This opens up the doors for improved and varied clients, integration with third-party applications, and more.
-3. **The application.** If nothing else, TagStudio the application serves as the first (and so far only) implementation for this system of metadata management. This has the responsibility of doing the idea justice and showing just what’s possible when it comes to user file management.
-4. (The name.) I think it’s fine for an app or client, but it doesn’t really make sense for a system or standard. I suppose this will evolve with time.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Roadmap & Featureset
 
 > [!NOTE]
 > This list is being expanded as we move forward with the project. Not all planned features are listed.
@@ -133,6 +62,10 @@ TagStudio is not a product. It is an *idea*. Here are the boundaries that define
 - [ ] Expand Building Instructions
 - [ ] UI Layout and design
 - [ ] Have a mostly complete frontend
+  - [ ] Dashboard
+    - [x] Have file type Buttons
+    - [ ] Show stats for each filetype
+    - [ ] Most recent list at the bottom
 - [ ] Expanding this list
 
 - [ ] LATER: Replace TagStudio upstream with TagStudioRusted
@@ -225,16 +158,16 @@ pnpm install
 ### Step 4.
 
 - You can now run a dev server, or build the project.
-> [!WARNING]
-> You may need the `WEBKIT_DISABLE_COMPOSITING_MODE=1` AND/OR `WEBKIT_DISABLE_DMABUF_RENDERER=1`enviroment variable while running the command below if you get a blank screen.
+  > [!WARNING]
+  > You may need the `WEBKIT_DISABLE_COMPOSITING_MODE=1` AND/OR `WEBKIT_DISABLE_DMABUF_RENDERER=1`enviroment variable while running the command below if you get a blank screen.
 
 ```
 pnpm tauri dev
 ```
 
 - Building and then running the project.
-> [!CAUTION]
-> Linux: It requires `NO_STRIP=true` as enviroment variable due to a bug in linuxdeploy, which is used to build .Appimage file.
+  > [!CAUTION]
+  > Linux: It requires `NO_STRIP=true` as enviroment variable due to a bug in linuxdeploy, which is used to build .Appimage file.
 
 ```
 pnpm tauri build
@@ -243,8 +176,10 @@ pnpm tauri build
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Step 5.
+
 > [!WARNING]
 > You may need the `WEBKIT_DISABLE_COMPOSITING_MODE=1` AND/OR `WEBKIT_DISABLE_DMABUF_RENDERER=1` enviroment variable while running the command below if you get a blank screen.
+
 - Locate the binary in `/src-tauri/target/release/bundle`, pray and then run it.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

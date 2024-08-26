@@ -15,7 +15,7 @@ export default {
 		adapter: adapter(),
 		alias: {
 			$paraglide: './src/paraglide',
-			$components: './src/components',
+			$components: './src/components'
 		}
 	}
 };
