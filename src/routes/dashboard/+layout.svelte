@@ -1,12 +1,12 @@
 <script lang="ts">
 	import Sidebar from '$components/Sidebar.svelte';
 	import { page } from '$app/stores';
-	import * as m from '$paraglide/messages';
-	import { languageTag } from '$paraglide/runtime';
 	let showSidebar = true;
 </script>
 
-<div class="navbar min-h-[5rem] border-opacity-50 bg-base-100">
+<div
+	class={`navbar min-h-[5rem] border-opacity-50 bg-base-100 delay-100 duration-200 ${!showSidebar ? 'shadow-2xl' : ''}`}
+>
 	<div class="flex-none">
 		<button on:click={() => (showSidebar = !showSidebar)} class="btn btn-square btn-ghost">
 			<svg
