@@ -31,3 +31,6 @@ vite.config.ts.timestamp-*
 # TagStudio
 .TagStudio
 agStudio.ini
+
+.devenv
+.direnv
