@@ -127,10 +127,8 @@ TagStudio is not a product. It is an *idea*. Here are the boundaries that define
 
 - [x] Have a working window
 - [x] Build the app i18n ready (continous)
-@@ -37,38 +135,82 @@ Top Priority:
 - [ ] Have a mostly complete frontend
 - [ ] Expanding this list
-
 - [ ] LATER: Replace TagStudio upstream with TagStudioRusted
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
