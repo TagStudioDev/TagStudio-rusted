@@ -1,21 +1,26 @@
-use tauri::api::dialog::blocking::FileDialogBuilder;
+use tauri::AppHandle;
+use tauri_plugin_dialog::DialogExt;
 
 use crate::library::Library;
 
 #[tauri::command]
-pub async fn library_create() {
-    let paths = FileDialogBuilder::new()
+pub async fn library_create(app_handle: AppHandle) {
+    let paths = app_handle
+        .dialog()
+        .file()
         .set_title("Select Locations")
-        .pick_folders();
+        .blocking_pick_folders();
     dbg!(paths);
 }
 
 #[tauri::command]
-pub async fn library_open() {
-    let path = FileDialogBuilder::new()
+pub async fn library_open(app_handle: AppHandle) {
+    let path = app_handle
+        .dialog()
+        .file()
         .set_title("Select Library")
-        .pick_folder();
+        .blocking_pick_folder();
     if let Some(path) = path {
-        let library = Library::open(path);
+        let _library = Library::open(path);
     }
 }

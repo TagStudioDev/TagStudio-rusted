@@ -81,7 +81,7 @@ impl Library {
                 .create_if_missing(create),
         )
         .await?;
-        sqlx::migrate!().run(&pool).await?;
+        // sqlx::migrate!().run(&pool).await?;
 
         Ok(pool)
     }

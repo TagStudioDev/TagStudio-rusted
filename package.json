@@ -5,14 +5,13 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && vite build",
+		"build": "vite build",
 		"preview": "vite preview",
 		"tauri": "tauri",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write .",
-		"postinstall": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide"
+		"format": "prettier --write ."
 	},
 	"dependencies": {
 		"@tauri-apps/api": "2.0.0-rc.3",
