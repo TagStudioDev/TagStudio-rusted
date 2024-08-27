@@ -30,7 +30,13 @@ vite.config.ts.timestamp-*
 
 # TagStudio
 .TagStudio
-agStudio.ini
+TagStudio.ini
 
 .devenv
 .direnv
+
+# Ignore runtime-specific files
+bun.lockb
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
