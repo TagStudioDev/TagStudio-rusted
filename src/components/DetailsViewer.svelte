@@ -9,7 +9,7 @@
 <div class=" flex-1 bg-base-100">
     <h3 class="text-2xl font-bold">Item.png</h3>
     <div class="m-4 mt-8">
-        <div class="w-fill flex h-[13.5rem] items-center justify-center bg-base-300">
+        <div class="w-fill flex h-[13.5rem] items-center justify-center rounded-xl bg-base-300">
             <TSLogo className="fill-base-100 w-40 h-40" />
         </div>
         <div class="mt-2 flex w-full flex-wrap">

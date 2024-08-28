@@ -33,7 +33,7 @@
 {/snippet}
 
 <div class="h-full w-full bg-base-200 px-4 pb-4">
-    <div class="flex h-full w-full flex-wrap rounded-[2rem] bg-base-100 p-6">
+    <div class="flex h-full w-full flex-wrap rounded-2xl bg-base-100 p-6">
         <div class="-mt-1 min-w-[60vw] flex-1">
             <Controls />
             <div>
