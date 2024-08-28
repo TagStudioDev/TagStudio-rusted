@@ -1,10 +1,8 @@
 <script lang="ts">
-    const { className, width, height }: { className: string; width: string; height: string } = $props();
+    const { className }: { className: string } = $props();
 </script>
 
 <svg
-    {width}
-    {height}
     class={className}
     viewBox="0 0 687 687"
     version="1.1"
