@@ -215,8 +215,8 @@ pnpm install
 ### Step 4.
 
 - You can now run a dev server, or build the project.
-@@ -96,7 +240,96 @@ pnpm tauri dev
-pnpm tauri build
+@@ -96,7 +240,96 @@ pnpm dev
+pnpm build
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
