@@ -21,6 +21,6 @@ pub async fn library_open(app_handle: AppHandle) {
         .set_title("Select Library")
         .blocking_pick_folder();
     if let Some(path) = path {
-        let _library = Library::open(path);
+        let _library = Library::open(path.into_path().unwrap());
     }
 }
